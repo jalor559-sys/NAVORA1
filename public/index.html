@@ -1,0 +1,191 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>User Project</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="navbar navbar-expand-lg bg-primary navbar-dark">
+        <div class="container-fluid">
+
+            <a class="navbar-brand" href="#">NavBar - Bootstrap</a>
+
+            <div class="ms-auto">
+
+                <button class="btn btn-light me-2" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    Signup
+                </button>
+
+                <button class="btn btn-light" data-bs-toggle="modal" data-bs-target="#loginModal">
+                    Login
+                </button>
+
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- ================= SIGNUP MODAL ================= -->
+
+    <div class="modal fade" id="signupModal">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header bg-warning">
+
+                    <h4>Signup Form</h4>
+
+                    <button class="btn-close" data-bs-dismiss="modal"> </button>
+
+                </div>
+
+                <div class="modal-body">
+                    <div class="text-center mb-3">
+                        <img src="images/agent.jpg" class="rounded-circle border" width="120" height="120">
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>Email ID</label>
+
+                        <input type="email" class="form-control" id="txtEmail" name="txtEmail">
+                        <span id="emailMsg">*</span>
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>Password</label>
+
+                        <input type="password" class="form-control" id="txtPwd" name="txtPwd">
+
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">User Type</label>
+
+                        <div class="input-group">
+
+                            <input type="text" class="form-control" id="userType" placeholder="Select User Type"
+                                readonly>
+
+                            <button class="btn btn-outline-secondary dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown">
+                                <i class="bi bi-heart-fill text-danger"></i>
+                            </button>
+
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#" onclick="setType('Silver')">Silver</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="setType('Gold')">Gold</a></li>
+                                <li><a class="dropdown-item" href="#" onclick="setType('Diamond')">Diamond</a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-primary" id="btnSignup">
+                        Signup Now
+                    </button>
+
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= LOGIN MODAL ================= -->
+
+    <div class="modal fade" id="loginModal">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-header bg-success text-white">
+
+                    <h4>Login Form</h4>
+
+                    <button class="btn-close bg-white" data-bs-dismiss="modal"></button>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <div class="text-center mb-3">
+                            <img src="images/agent.jpg" class="rounded-circle border" width="120" height="120">
+                        </div>
+
+                        <label>Email ID</label>
+
+                        <input type="email" class="form-control" id="txtEmail2">
+
+                    </div>
+
+                    <div class="mb-3">
+
+                        <label>Password</label>
+
+                        <input type="password" class="form-control" id="txtPwd2">
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button class="btn btn-success" id="btnLogin">
+                        Login
+                    </button>
+
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">
+                        Close
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function setType(type) {
+            document.getElementById("userType").value = type;
+        }
+    </script>
+<script src="js/script.js"></script>
+</body>
+</html>
